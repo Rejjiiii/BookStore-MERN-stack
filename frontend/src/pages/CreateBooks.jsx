@@ -10,7 +10,6 @@ function CreateBooks() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [publishYear, setPublishYear] = useState('');
-  const [pdfFile, setPdfFile] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
@@ -24,8 +23,7 @@ function CreateBooks() {
     const data = {
       title,
       author,
-      publishYear,
-      pdfFile
+      publishYear
     };
     setLoading(true);
     axios
